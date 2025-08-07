@@ -32,11 +32,6 @@ if not app.debug:
     handler.setFormatter(formatter)
     app.logger.addHandler(handler)
 
-# Add HTTPS redirect
-from flask_talisman import Talisman
-if not app.debug:
-    Talisman(app, force_https=True)
-
 # TMDb API Configuration
 API_KEY = "47aa3b4def8767b97ea958e92b233aec"
 ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0N2FhM2I0ZGVmODc2N2I5N2VhOTU4ZTkyYjIzM2FlYyIsIm5iZiI6MTc1MzU4NTA3MS4yMjIwMDAwMSwic3ViIjoiNjg4NTk1YWZmYjQxOGIxYWMxMzhmNmE3Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.6dfVkYzjkrLLh7072uq-iMe8D2FoPeFCiZXKtfGVrCI"
